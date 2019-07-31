@@ -20,12 +20,12 @@ const sketch = () => {
       lineArr.push([x, y])
       context.beginPath()
       context.arc(x / 2, y / 2 , 3.5, 0, Math.PI* 2)
-      x = x + Math.abs(random.range(-20, 20))
-      y = y + Math.abs(random.range(-20, 20))
+      x = x + Math.abs(random.range(-100, 100))
+      y = y + Math.abs(random.range(-100, 100))
       context.fillStyle = 'black'
       context.fill()
     }
-    for (let i = 0; i < lineArr.length; i++) {
+    for (let i = 0; i < lineArr.length - 1; i++) {
       console.log(lineArr)
       console.log(lineArr[i + 1][0], lineArr[i + 1][1])
       context.beginPath()
